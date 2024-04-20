@@ -1,5 +1,5 @@
 const defaultFilters = [
-	"*://*.doubleclick.net/*",
+    "*://*.doubleclick.net/*",
     "*://partner.googleadservices.com/*",
     "*://*.googlesyndication.com/*",
     "*://*.google-analytics.com/*",
@@ -84,10 +84,11 @@ const defaultFilters = [
     "*://*.bannerconnect.net/*",
     "*://*.bidvertiser.com/*",
     "*://*.blitzen.com/*",
+    "*://*.makemytrip.com/*", // Added URL with the desired regex
 ];
 
 chrome.webRequest.onBeforeRequest.addListener(
-    function(details) { return { cancel: true }},
+    function (details) { return { cancel: true } },
     { urls: defaultFilters },
     ["blocking"]
 )
